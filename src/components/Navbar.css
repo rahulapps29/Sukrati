@@ -1,0 +1,113 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #ff7f50, #ff4500);
+  color: white;
+  padding: 15px 30px;
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hidden on desktop view */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.hamburger:hover .line {
+  background-color: #f0e68c;
+}
+
+/* Navigation Links - Default (Desktop View) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Navigation Links */
+.nav-links li {
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.nav-links li:hover {
+  color: #f0e68c;
+  transform: scale(1.1);
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 767px) {
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide Navigation Links by Default */
+  .nav-links {
+    display: none; /* Ensure hidden initially */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff4500, #ff7f50);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+
+  /* Show Links When Menu Is Open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* Mobile Link Styling */
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+    color: white;
+  }
+
+  .nav-links li:hover {
+    color: #ffd700;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex; /* Always visible in desktop view */
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+}
