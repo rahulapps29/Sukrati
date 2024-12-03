@@ -32,7 +32,7 @@ const ProductGallery = () => {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        padding: "20px",
+        padding: "5px",
       }}
     >
       {furnitureData.map((item) => (
@@ -41,8 +41,8 @@ const ProductGallery = () => {
             src={item.image}
             alt={item.name}
             style={{
-              width: "200px",
-              height: "200px",
+              width: "20rem",
+              height: "300px",
               objectFit: "cover",
               cursor: "pointer",
             }}
@@ -84,7 +84,7 @@ const ProductGallery = () => {
                 color: "white",
                 border: "none",
                 borderRadius: "5px",
-                padding: "10px 15px",
+                padding: "5px 15px",
                 cursor: "pointer",
                 fontSize: "16px",
                 zIndex: 1100,
@@ -98,10 +98,10 @@ const ProductGallery = () => {
               style={{
                 maxWidth: "90%",
                 maxHeight: "80%",
-                borderRadius: "10px",
+                borderRadius: "5px",
               }}
             />
-            <h2 style={{ marginTop: "15px" }}>{selectedImage.name}</h2>
+            <h2 style={{ marginTop: "5px" }}>{selectedImage.name}</h2>
           </div>
         </div>
       )}

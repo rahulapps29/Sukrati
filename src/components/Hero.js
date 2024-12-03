@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div
       style={{
-        padding: "50px",
+        padding: "30px",
         textAlign: "center",
         backgroundColor: "#f4f4f4",
       }}
